@@ -34,28 +34,37 @@ follow-up notes on every lead.
 | Auth       | JWT + bcrypt password hashing             |
 
 ## Project Structure
-
-```
 mini-crm/
 ├── backend/
-│   ├── config/db.js              # MongoDB connection
-│   ├── controllers/              # Route logic (auth, leads)
-│   ├── middleware/authMiddleware.js
-│   ├── models/                   # Admin & Lead Mongoose schemas
-│   ├── routes/                   # authRoutes, leadRoutes
-│   ├── seed/createAdmin.js       # creates the first admin account
-│   ├── server.js
-│   └── .env.example
+│ ├── config/db.js # MongoDB connection
+│ ├── controllers/ # Route logic (auth, leads)
+│ ├── middleware/authMiddleware.js
+│ ├── models/ # Admin & Lead Mongoose schemas
+│ ├── routes/ # authRoutes, leadRoutes
+│ ├── seed/createAdmin.js # creates the first admin account
+│ ├── server.js
+│ └── .env.example
 └── frontend/
-    ├── public/index.html
-    └── src/
-        ├── api/axios.js          # axios instance + JWT interceptor
-        ├── components/           # Navbar, StatusBadge, ProtectedRoute
-        ├── context/AuthContext.jsx
-        ├── pages/                # Login, Dashboard, LeadDetail
-        ├── App.jsx
-        └── .env.example
-```
+├── public/index.html
+└── src/
+├── api/axios.js # axios instance + JWT interceptor
+├── components/ # Navbar, StatusBadge, ProtectedRoute
+├── context/AuthContext.jsx
+├── pages/ # Login, Dashboard, LeadDetail
+├── App.jsx
+└── .env.example
+
+
+## Live Demo
+
+- **App:** https://future-fs-02-mauve-eight.vercel.app
+- **Backend API:** https://mini-crm-backend-ipu9.onrender.com
+
+**Test login credentials:**
+- Email: `saheema@minicrm.com`
+- Password: `Saheema@123`
+
+> Note: the backend is hosted on Render's free tier, which sleeps after periods of inactivity. The first request after a while may take 30–60 seconds to respond while it wakes up — this is expected, not a bug.
 
 ## Setup Instructions
 
@@ -125,7 +134,6 @@ The lead will immediately show up on the admin dashboard with status `new`.
 
 ## Possible Next Steps
 
-- Deploy backend (Render/Railway) and frontend (Vercel/Netlify)
 - Add pagination for large lead lists
 - Email notifications when a new lead comes in
 - Role-based access for multiple team members
