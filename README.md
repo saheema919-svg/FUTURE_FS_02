@@ -34,7 +34,9 @@ follow-up notes on every lead.
 | Auth       | JWT + bcrypt password hashing             |
 
 ## Project Structure
-'''mini-crm/
+
+```text
+mini-crm/
 ├── backend/
 │   ├── config/
 │   │   └── db.js
@@ -72,7 +74,8 @@ follow-up notes on every lead.
     │   │   └── LeadDetail.jsx
     │   └── App.jsx
     └── .env.example
-'''    
+```
+
 ## Live Demo
 
 - **App:** https://future-fs-02-mauve-eight.vercel.app
