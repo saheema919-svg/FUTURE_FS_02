@@ -36,25 +36,43 @@ follow-up notes on every lead.
 ## Project Structure
 mini-crm/
 ├── backend/
-│ ├── config/db.js # MongoDB connection
-│ ├── controllers/ # Route logic (auth, leads)
-│ ├── middleware/authMiddleware.js
-│ ├── models/ # Admin & Lead Mongoose schemas
-│ ├── routes/ # authRoutes, leadRoutes
-│ ├── seed/createAdmin.js # creates the first admin account
-│ ├── server.js
-│ └── .env.example
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   └── leadController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── Admin.js
+│   │   └── Lead.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── leadRoutes.js
+│   ├── seed/
+│   │   └── createAdmin.js
+│   ├── server.js
+│   └── .env.example
+│
 └── frontend/
-├── public/index.html
-└── src/
-├── api/axios.js # axios instance + JWT interceptor
-├── components/ # Navbar, StatusBadge, ProtectedRoute
-├── context/AuthContext.jsx
-├── pages/ # Login, Dashboard, LeadDetail
-├── App.jsx
-└── .env.example
-
-
+    ├── public/
+    │   └── index.html
+    ├── src/
+    │   ├── api/
+    │   │   └── axios.js
+    │   ├── components/
+    │   │   ├── Navbar.jsx
+    │   │   ├── StatusBadge.jsx
+    │   │   └── ProtectedRoute.jsx
+    │   ├── context/
+    │   │   └── AuthContext.jsx
+    │   ├── pages/
+    │   │   ├── Login.jsx
+    │   │   ├── Dashboard.jsx
+    │   │   └── LeadDetail.jsx
+    │   └── App.jsx
+    └── .env.example
+    
 ## Live Demo
 
 - **App:** https://future-fs-02-mauve-eight.vercel.app
